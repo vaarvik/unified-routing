@@ -1,16 +1,19 @@
-declare global {
-    interface HTMLElementTagNameMap {
-        'header-component': SimpleHeaderComponent;
-    }
-}
+import * as styles from './header-component.module.css';
 
-export class SimpleHeaderComponent extends HTMLElement {
+export class HeaderComponent extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({
-            mode: 'open',
-        }).innerHTML = `<p style="color: red; display: block; width: 100px; height: 100px; background-color: blue; z-index: 99;">Hello World!</p>`;
+    }
+    connectedCallback() {
+        // Initialization and manipulation of content moved here
+        this.innerHTML = `<p class="${styles.header}">Hello World!</p>`;
     }
 }
 
-customElements.define('header-component', SimpleHeaderComponent);
+customElements.define('header-component', HeaderComponent);
+
+declare global {
+    interface HTMLElementTagNameMap {
+        'header-component': HeaderComponent;
+    }
+}
