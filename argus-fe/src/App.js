@@ -9,7 +9,7 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>ARGUS BRO!</p>
             </header>
-            <header-component text="Hello World!"></header-component>
+            <header-component text="Hola!"></header-component>
         </div>
     );
 }
