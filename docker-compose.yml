@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+    nginx:
+        container_name: unified-routing-nginx
+        image: nginx:1.23.4
+        environment:
+            ARGUS_FE_HOSTNAME: ${ARGUS_FE_HOSTNAME:-localhost}
+            ARGUS_FE_PORT: ${ARGUS_FE_PORT}
+            VACAY_FE_HOSTNAME: ${VACAY_FE_HOSTNAME:-localhost}
+            VACAY_FE_PORT: ${VACAY_FE_PORT}
+        volumes:
+            - ./docker/nginx-local/nginx-init.sh:/docker-entrypoint.d/nginx-init.sh
+            - ./docker/nginx-local/default.conf.template:/etc/nginx/conf.d/default.conf.template
+        network_mode: host

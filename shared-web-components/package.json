@@ -1,0 +1,26 @@
+{
+    "name": "shared-web-components",
+    "description": "Shared web components for my applications",
+    "version": "1.0.1",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "start": "webpack serve --mode development",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.5.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.0.4"
+    },
+    "types": "./src/types/index.d.ts",
+    "files": [
+        "src/**/*.ts",
+        "src/types/index.d.ts",
+        "src/index.js"
+    ]
+}
