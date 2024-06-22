@@ -1,0 +1,18 @@
+@import './../styles/01_global/colors';
+
+.header {
+    align-items: center;
+    background-color: #1976d2;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: $black;
+    display: flex;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    height: 60px;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 20px;
+    width: calc(100% - 40px);
+}

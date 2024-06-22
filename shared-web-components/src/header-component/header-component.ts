@@ -1,4 +1,4 @@
-import * as styles from './header-component.module.css';
+import * as styles from './header-component.module.scss';
 
 export class HeaderComponent extends HTMLElement {
     static get observedAttributes() {

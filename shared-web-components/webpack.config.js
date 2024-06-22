@@ -3,15 +3,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
+                test: /\.scss$/,
                 use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                        },
-                    },
+                    'style-loader', // Creates `style` nodes from JS strings
+                    'css-loader', // Translates CSS into CommonJS
+                    'sass-loader', // Compiles Sass to CSS
                 ],
             },
             {
